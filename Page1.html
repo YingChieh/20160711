@@ -3,14 +3,17 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="D:/0711/Script1.js"></script>
     <title></title>
 </head>
 <body>
-    <table id="Content" border="1">
+    <!--初始頁面-->
+    <table id="Content" border="1"> <!--資料表格-->
         <tbody>
-            <tr>
+            <tr> <!--表頭-->
                 <th width="52"></th>
                 <th><span id="1">▼</span><a class="ordercolumn" id="Order1" onclick="Order(this.id)" href="#" columntype="DESC" selectcolumn="true" column="1">學年度</a></th>
                 <th><span id="Column2"></span><a class="ordercolumn" id="Order2" onclick="Order(this.id)" href="#" column="2">學期</a></th>
@@ -118,7 +121,19 @@
         </tbody>
     </table>
 
-    <p id="print_guid"></p>
-    <p id="date"></p>
+    <!--編輯視窗-->
+    <div id="dialog" title="info dialog" height="435px"  width="396px" >
+        <!--表格-->
+        <table id="dia_content" border="1">
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <p id="print_guid"></p>     <!--所有[匯出RAW檔]的guid輸出區塊-->
+
+    <p id="date"></p>    <!--所有[問卷結束時間]的輸出區塊-->
+
 </body>
 </html>
